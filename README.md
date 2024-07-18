@@ -39,6 +39,7 @@ Probé varios modelos incluyendo Árboles de Decisión, Random Forest y Gradient
 ### Evaluación de Modelos
 
 Utilicé métricas como R^2 Score y Mean Squared Error para comparar y seleccionar el mejor modelo basado en su rendimiento.
+
 Model: Decision Tree
 Cross-Validated R^2 Score: 0.8896 ± 0.0202
 ------------------------------
@@ -48,6 +49,7 @@ Cross-Validated R^2 Score: 0.9049 ± 0.0176
 Model: Gradient Boosting
 Cross-Validated R^2 Score: 0.8956 ± 0.0122
 ------------------------------
+
 
 ## Optimización de Hiperparámetros
 

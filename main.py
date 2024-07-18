@@ -48,7 +48,10 @@ def predict(data: PredictionRequest):
         # Realiza la predicción
         prediction = model.predict(input_scaled)
 
-        return {"prediction": prediction[0]}
+        # Redondear la predicción a un decimal
+        rounded_prediction = round(prediction[0], 1)
+
+        return {"prediction": rounded_prediction}
     except Exception as e:
         logger.error(f"Error al realizar la predicción: {e}")
         raise HTTPException(

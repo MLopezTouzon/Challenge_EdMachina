@@ -34,7 +34,7 @@ Dividí el dataset en conjuntos de entrenamiento y prueba. Utilicé técnicas de
 
 ### Selección de Modelos
 
-Probé varios modelos incluyendo Decision Tree, Linear Regression, Random Forest y Gradient Boosting para encontrar el más adecuado.
+Probé varios modelos incluyendo Decision Tree, Linear Regression, Random Forest y Gradient Boosting para encontrar el más adecuado. La elección de estos modelos se basa en su capacidad para manejar diferentes tipos de relaciones y estructuras en los datos.
 
 ### Evaluación de Modelos
 

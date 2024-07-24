@@ -107,6 +107,9 @@ R^2 Score: 0.9520
   "tiempo_entrega": 5
 }
 
+```
 
 
+# Conclusiones y Próximos Pasos:
 
+En conclusión, nuestro modelo proporciona una herramienta útil para prever el rendimiento académico y, por lo tanto, permitir intervenciones más efectivas. Los próximos pasos incluyen la implementación del modelo en un entorno real y la continua mejora basada en nuevos datos y retroalimentación.

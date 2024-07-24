@@ -24,10 +24,8 @@ class PredictionRequest(BaseModel):
     # Define las características que tu modelo necesita para hacer una predicción
     nota_parcial_media: float
     nota_parcial_mediana: float
-    nota_parcial_varianza: float
     score_media: float
     score_mediana: float
-    score_varianza: float
     frecuencia_tareas: float
     frecuencia_examenes: float
     tiempo_entrega: float
@@ -38,9 +36,13 @@ def predict(data: PredictionRequest):
     try:
         # Convierte los datos de entrada a un formato adecuado para el modelo
         input_data = np.array([[
-            data.nota_parcial_media, data.nota_parcial_mediana, data.nota_parcial_varianza,
-            data.score_media, data.score_mediana, data.score_varianza,
-            data.frecuencia_tareas, data.frecuencia_examenes, data.tiempo_entrega
+            data.nota_parcial_media,
+            data.nota_parcial_mediana,
+            data.score_media,
+            data.score_mediana,
+            data.frecuencia_tareas,
+            data.frecuencia_examenes,
+            data.tiempo_entrega
         ]])
 
         # Escalar los datos de entrada

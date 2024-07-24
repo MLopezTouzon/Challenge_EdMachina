@@ -18,7 +18,7 @@ Agrupé los datos por `user_uuid`, `course_uuid`, y `particion`, creando nuevas 
 
 ### Análisis de Tendencias
 
-Visualicé cómo las notas finales variaban con el tiempo para identificar patrones y tendencias relevantes.
+El análisis de tendencias revela que un buen rendimiento durante el curso, medido a través de las notas parciales, el score de tareas y exámenes, está fuertemente asociado con un buen rendimiento en el examen final. Por lo tanto, fomentar un desempeño constante y alto a lo largo del curso puede ser una estrategia efectiva para mejorar los resultados finales de los estudiantes.
 
 ## Preparación del Dataset para Modelado
 
@@ -34,20 +34,23 @@ Dividí el dataset en conjuntos de entrenamiento y prueba. Utilicé técnicas de
 
 ### Selección de Modelos
 
-Probé varios modelos incluyendo Árboles de Decisión, Random Forest y Gradient Boosting para encontrar el más adecuado.
+Probé varios modelos incluyendo Decision Tree, Linear Regression, Random Forest y Gradient Boosting para encontrar el más adecuado.
 
 ### Evaluación de Modelos
 
 Utilicé métricas como R^2 Score y Mean Squared Error para comparar y seleccionar el mejor modelo basado en su rendimiento.
 
 Model: Decision Tree
-Cross-Validated R^2 Score: 0.8896 ± 0.0202
+Cross-Validated R^2 Score: 0.8884 ± 0.0156
+
+Model: Linear Regression
+Cross-Validated R^2 Score: 0.6625 ± 0.0203
 
 Model: Random Forest
-Cross-Validated R^2 Score: 0.9049 ± 0.0176
+Cross-Validated R^2 Score: 0.9049 ± 0.0186
 
 Model: Gradient Boosting
-Cross-Validated R^2 Score: 0.8956 ± 0.0122
+Cross-Validated R^2 Score: 0.8958 ± 0.0124
 
 
 
@@ -79,30 +82,31 @@ R^2 Score: 0.9520
 
 # Ejemplos para probar el Endpoint Predict
 
-### Nota más cercana a 8 y a 5:
+### Nota más cercana a 8 y a 3:
 
 ```json
 {
-  "nota_parcial_media": 7.5,
+  "nota_parcial_media": 7,
   "nota_parcial_mediana": 8,
-  "nota_parcial_varianza": 1.2,
-  "score_media": 8.5,
-  "score_mediana": 9,
-  "score_varianza": 0.9,
-  "frecuencia_tareas": 3,
-  "frecuencia_examenes": 4,
+  "score_media": 6,
+  "score_mediana": 7,
+  "frecuencia_tareas": 2,
+  "frecuencia_examenes": 2,
+  "tiempo_entrega": 11
+}
+
+
+
+{
+  "nota_parcial_media": 2,
+  "nota_parcial_mediana": 3,
+  "score_media": 2,
+  "score_mediana": 2,
+  "frecuencia_tareas": 1,
+  "frecuencia_examenes": 1,
   "tiempo_entrega": 5
 }
 
 
-{
-  "nota_parcial_media": 3.5,
-  "nota_parcial_mediana": 3,
-  "nota_parcial_varianza": 1.5,
-  "score_media": 3.5,
-  "score_mediana": 4,
-  "score_varianza": 1.2,
-  "frecuencia_tareas": 2,
-  "frecuencia_examenes": 3,
-  "tiempo_entrega": 7
-}
+
+

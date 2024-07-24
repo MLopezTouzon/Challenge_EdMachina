@@ -14,7 +14,7 @@ def preprocess_data(file_path='data/challenge_para_modelo.csv', sep=';'):
     X = df.drop(columns=[
         'user_uuid', 'course_uuid', 'particion',
         's_created_at', 's_submitted_at', 'nota_final_media',
-        'nota_final_mediana', 'nota_final_varianza', 'nota_final_materia'
+        'nota_final_mediana', 'nota_final_varianza', 'nota_final_materia', 'nota_parcial_varianza', 'score_varianza'
     ])
     y = df['nota_final_materia']
 

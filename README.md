@@ -82,7 +82,7 @@ R^2 Score: 0.9520
 
 # Ejemplos para probar el Endpoint Predict
 
-### Nota más cercana a 8 y a 3:
+### Nota más cercana a 8:
 
 ```json
 {
@@ -94,9 +94,10 @@ R^2 Score: 0.9520
   "frecuencia_examenes": 2,
   "tiempo_entrega": 11
 }
+```
+### Nota más cercana a 3:
 
-
-
+```json
 {
   "nota_parcial_media": 2,
   "nota_parcial_mediana": 3,
